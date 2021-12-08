@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import jwt from "jsonwebtoken";
 import { setUser } from "./store/userAuth";
 import { useDispatch } from "react-redux";
-import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();

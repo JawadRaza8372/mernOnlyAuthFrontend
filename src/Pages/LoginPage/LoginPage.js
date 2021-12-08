@@ -43,7 +43,10 @@ export default function LoginPage() {
   const loginForm = async (e) => {
     e.preventDefault();
 
-    const resp = await axios.post("http://localhost:4000/login", loginformdata);
+    const resp = await axios.post(
+      "https://mernonlysimpleauth.herokuapp.com/login",
+      loginformdata
+    );
     const mainData = resp?.data;
     if (mainData?.data === null) {
       toast.error(`${mainData?.message}`, {
@@ -73,7 +76,10 @@ export default function LoginPage() {
   };
   const registerForm = async (e) => {
     e.preventDefault();
-    const resp = await axios.post("http://localhost:4000/register", formdata);
+    const resp = await axios.post(
+      "https://mernonlysimpleauth.herokuapp.com/register",
+      formdata
+    );
     console.log(resp.data);
     const mainData = resp?.data;
     if (mainData?.data === null) {
