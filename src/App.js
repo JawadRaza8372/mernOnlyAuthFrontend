@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from "./Navigation/Routes";
+import { useEffect } from "react";
+import jwt from "jsonwebtoken";
+import { setUser } from "./store/userAuth";
+import { useDispatch } from "react-redux";
+import { ToastContainer } from "react-toastify";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchUser = async () => {
+      const rawdata = localStorage.getItem("user");
+      if (rawdata) {
+        const data = await JSON.parse(rawdata);
+        const decode = await jwt.decode(data);
+        dispatch(setUser({ data: decode }));
+      }
+      console.log(rawdata);
+    };
+    fetchUser();
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes />
+    </>
   );
 }
 

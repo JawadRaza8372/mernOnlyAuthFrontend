@@ -1,0 +1,89 @@
+.authpage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../ownAssets/background_png.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .containerDiv {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 490px;
+    .header {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: #605ca8;
+        font-size: 3rem;
+      }
+    }
+    .content {
+      height: calc(100% - 4rem);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      form {
+        height: fit-content;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        input {
+          height: 3rem;
+          width: 90%;
+          margin: 10px auto;
+          margin-bottom: 5px;
+          outline: 0;
+          border: 2px solid #605ca8;
+          border-radius: 15px;
+          padding: 0 7px;
+          color: #605ca8;
+          font-size: 1.1rem;
+          &::placeholder {
+            color: #605ca8;
+          }
+        }
+        button {
+          width: 95%;
+          height: 3rem;
+          margin: 10px auto;
+          border: none;
+          outline: none;
+          background: #605ca8;
+          color: white;
+          border-radius: 15px;
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        width: 95%;
+        height: 3rem;
+        margin: 10px auto;
+        border: none;
+        outline: none;
+        background: #605ca8;
+        color: white;
+        border-radius: 15px;
+        font-size: 1.5rem;
+      }
+      .seprator {
+        height: 2px;
+        background: #605ca8;
+        width: 90%;
+        margin: 5px auto;
+      }
+    }
+  }
+}

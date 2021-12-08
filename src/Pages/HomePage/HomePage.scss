@@ -1,0 +1,34 @@
+.protectHome {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .centerdiv {
+    height: 100%;
+    width: 90%;
+    max-height: 300px;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: lightgrey;
+    border-radius: 15px;
+    h1 {
+      color: #605ca8;
+      font-size: 3.2rem;
+    }
+    button {
+      height: 3rem;
+      width: 100%;
+      max-width: 190px;
+      font-size: 1.5rem;
+      background: #605ca8;
+      color: white;
+      border-radius: 15px;
+      border: none;
+      outline: 0;
+    }
+  }
+}
